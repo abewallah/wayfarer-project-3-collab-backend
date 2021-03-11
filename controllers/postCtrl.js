@@ -15,14 +15,6 @@ const show = (req, res) => {
 }
 
 
-
-// const show = (req, res) => {
-//   db.Post.findById(req.params.id, (err, foundPost) => {
-//     if (err) return console.log(err);
-//     res.json(foundPost);
-//   });
-// };
-
 const create = (req, res) => {
   console.log(req.body)
   const city = req.body.city;

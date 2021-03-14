@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
   res.send('Test');
 });
 
-app.use('/api/cities', cityRoutes);
-app.use('/api/posts', postRoutes);
-app.use('/api/comments', commentRoutes);
+app.use('/cities', cityRoutes);
+app.use('/posts', postRoutes);
+app.use('/comments', commentRoutes);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));

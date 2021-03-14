@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const connectionString = 'mongodb://localhost:27017/wayfarer';
+const connectionString = process.env.MONGODB_URI || process.env.DATABASE
 
 mongoose
   .connect(connectionString, {
@@ -16,6 +16,5 @@ module.exports = {
   Post: require('./Post'),
   User: require('./User'),
   Comment: require('./Comment '),
-  secretOrKey: 'secret',
 }
 

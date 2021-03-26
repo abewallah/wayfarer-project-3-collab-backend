@@ -1,6 +1,5 @@
 const db = require('../models');
 
-
 const index = (req, res) => {
   db.City.find({}).populate('posts').exec((err, cities) => {
     if (err) return console.log(err);

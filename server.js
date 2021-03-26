@@ -8,7 +8,8 @@ const postRoutes = require('./routes/posts');
 const commentRoutes = require('./routes/comments');
 
 // Middleware
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res) => {
